@@ -28,9 +28,9 @@ class Card extends Component {
         let repos = data.map(repo => {
           return (
             <ul>
-              <li>Name: {repo.name}</li>
-              <li>Homepage: {repo.html_url}</li>
-              <li>Description: {repo.description}</li>
+              <li><a href={repo.html_url}>{repo.name}</a></li>
+              <li>{repo.description || "No description"}</li>
+              <li><button onClick={() => this.showCommits(repo.name)}>Show commits</button></li>
             </ul>
           );
         });
@@ -39,6 +39,12 @@ class Card extends Component {
         });
       })
       .catch(err => console.log(err));
+  }
+
+  showCommits(name) {
+    fetch(`https://api.github.com/repos/facebook/${name}/commits`)
+      .then(response => response.json())
+      .then(data => console.log(data));
   }
 
   render() {
