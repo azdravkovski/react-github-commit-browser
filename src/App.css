@@ -1,0 +1,12 @@
+.App {
+}
+
+ul {
+  width: 25%;
+  list-style-type: none;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
