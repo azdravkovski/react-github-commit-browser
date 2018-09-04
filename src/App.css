@@ -1,9 +1,31 @@
-.card-wrapper {
+/* * {
+  border: 1px dotted blue;
+} */
+
+.App section {
   display: flex;
-  flex-wrap: wrap;
 }
 
-.card-wrapper ul {
-  width: 30%;
+.repo-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+ul {
   list-style-type: none;
+}
+
+.commit-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.commit-wrapper ul {
+  width: 30%;
+}
+
+.commit-wrapper .search {
+  text-align: right;
 }
