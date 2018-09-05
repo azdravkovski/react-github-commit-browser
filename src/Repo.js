@@ -10,7 +10,7 @@ const Repo = props => {
       <li>{props.description || "No description"}</li>
       <li>
         <button onClick={props.getCommits}>
-          Show commits
+          Show commits >>>
         </button>
       </li>
     </ul>
